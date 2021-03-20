@@ -1,5 +1,3 @@
-alert ('Welcome to RUOLF');
-
 const menu = document.querySelector('#mobile_menu');
 const menuitems = document.querySelector('.nav');
 
@@ -17,6 +15,7 @@ const highlightMenu = () => {
   const elem = document.querySelector('.highlight');
 
   const storyMenu = document.querySelector('#story-page');
+  const productMenu = document.querySelector('#products-page');
   const recipeMenu = document.querySelector('#recipes-page');
   let scrollPos = window.scrollY;
   // console.log(scrollPos);
@@ -24,15 +23,23 @@ const highlightMenu = () => {
   // adds 'highlight' class to my menu items
   if (window.innerWidth > 600 && scrollPos < 400) {
     storyMenu.classList.remove('highlight');
+    productMenu.classList.remove('highlight');
     recipeMenu.classList.remove('highlight');
     return;
   } else if (window.innerWidth > 600 && scrollPos < 880) {
     storyMenu.classList.add('highlight');
+    productMenu.classList.remove('highlight');
     recipeMenu.classList.remove('highlight');
+    return;
+  } else if (window.innerWidth > 600 && scrollPos < 1500) {
+    productMenu.classList.add('highlight');
+    storyMenu.classList.remove('highlight');
+    recipeMenu.classList.remove('highlight')
     return;
   } else if (window.innerWidth > 600 && scrollPos < 2000) {
     recipeMenu.classList.add('highlight');
     storyMenu.classList.remove('highlight');
+    productMenu.classList.remove('highlight');
     return;
   }
 
