@@ -422,6 +422,8 @@ header {
 
     .recipes h2 {
         margin-top: 150px;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     .recipes-img-container {
@@ -430,7 +432,7 @@ header {
     }
 
     .recipe-button {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .footer {
